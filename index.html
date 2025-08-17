@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Micro City — GTA‑style Web Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="ui">
+    <div class="title">Micro City</div>
+    <div class="hud">
+      <div>Speed: <span id="speed">0</span> km/h</div>
+      <div>Wanted: <span id="wanted">0</span> ⭐</div>
+      <div>Cash: $<span id="cash">0</span></div>
+      <div>Time: <span id="clock">00:00</span></div>
+      <div>Weather: <span id="weather">Clear</span></div>
+      <div>Mission: <span id="mission">None</span></div>
+    </div>
+    <div class="controls">
+      <p><b>Controls</b>: WASD/Arrow Keys to drive • Space = Handbrake • E = Enter/Exit Car • M = Mini-map • N = Next mission</p>
+    </div>
+  </div>
+
+  <canvas id="game" width="1200" height="720"></canvas>
+  <canvas id="minimap" width="220" height="220" class="hidden"></canvas>
+
+  <div id="mobileOverlay" class="hidden">
+    <div class="mobile-controls">
+      <button data-k="ArrowUp">▲</button>
+      <div class="lr">
+        <button data-k="ArrowLeft">◀</button>
+        <button data-k="Space">⟳</button>
+        <button data-k="ArrowRight">▶</button>
+      </div>
+      <button data-k="ArrowDown">▼</button>
+      <button data-k="KeyE">E</button>
+      <button data-k="KeyM">M</button>
+      <button data-k="KeyN">N</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
